@@ -1,4 +1,4 @@
-package br.com.caelum.vraptor.controller;
+package br.com.caelum.vraptor.goodbuy.controller;
 
 import javax.inject.Inject;
 

@@ -12,17 +12,7 @@
         type="text" name="usuario.login" value="${usuario.login }"/>
 
     <label for="senha">Senha:</label>
-      <input id="senha"  type="password" 
-      name="usuario.senha"/>
-
-    <label for="confirmacao">Confirme a senha:</label>
-      <input id="confirmacao" equalTo="#senha" type="password"/>
-      
-    <label for="opcaoDePerfil">Tipo de perfil</label>
-    <select name="opcaoDePerfil">
-    	<option value="ADMINISTRADOR">Admin</option>
-    	<option value="VISITANTE">Visitante</option>
-    </select>  
+      <input id="senha"  type="password" name="usuario.senha"/>
 
     <button type="submit">Enviar</button>
   </fieldset>
