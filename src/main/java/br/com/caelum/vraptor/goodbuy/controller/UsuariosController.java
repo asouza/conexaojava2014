@@ -7,7 +7,7 @@ import br.com.caelum.vraptor.Controller;
 import br.com.caelum.vraptor.Get;
 import br.com.caelum.vraptor.Post;
 import br.com.caelum.vraptor.goodbuy.daos.UsuarioDAO;
-import br.com.caelum.vraptor.goodbuy.goodbuy.models.Usuario;
+import br.com.caelum.vraptor.goodbuy.models.Usuario;
 
 @Controller
 public class UsuariosController {
@@ -23,7 +23,6 @@ public class UsuariosController {
 	@Post("/usuarios")
 	@Transactional
 	public void cria(Usuario usuario){
-		System.out.println(usuario);
 		usuarios.salva(usuario);
 	}
 }

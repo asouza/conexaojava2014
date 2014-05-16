@@ -1,4 +1,4 @@
-package br.com.caelum.vraptor.goodbuy.goodbuy.models;
+package br.com.caelum.vraptor.goodbuy.models;
 
 import javax.persistence.Column;
 import javax.persistence.Entity;

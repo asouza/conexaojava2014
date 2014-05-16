@@ -8,6 +8,7 @@
 	<persistence-unit name="default" transaction-type="JTA">
 	
 		<class>br.com.caelum.vraptor.goodbuy.models.Usuario</class>
+		<class>br.com.caelum.vraptor.goodbuy.models.Produto</class>
 		<jta-data-source>java:jboss/datasources/GoodbuyDS</jta-data-source>
 	
 		<properties>

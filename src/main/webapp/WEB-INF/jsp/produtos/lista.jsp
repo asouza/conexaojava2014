@@ -8,16 +8,15 @@
     </tr>
   </thead>
   <tbody>
-    <c:forEach items="${produtoList}" var="produto">
+    <c:forEach items="${produtoList}" var="produto" varStatus="status">
       <tr>
         <td>${produto.nome }</td>
         <td>${produto.descricao }</td>
-        <td>${produto.preco }</td>        
-        <td><a href="<c:url value="/produtos/${produto.id}"/>">Editar</a></td>
+        <td>${produto.preco }</td>                
         <td>
-		  <form action="<c:url value="/produtos/${produto.id}"/>"
+		  <form action="<c:url value="/carrinho/${status.index}"/>"
 		    method="POST">
-		    <button class="link" name="_method" value="DELETE">
+		    <button class="link">
 		      Remover
 		    </button>
 		  </form>        
