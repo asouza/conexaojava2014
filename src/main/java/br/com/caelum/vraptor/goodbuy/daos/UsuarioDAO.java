@@ -6,7 +6,7 @@ import javax.persistence.PersistenceContext;
 import br.com.caelum.vraptor.goodbuy.models.Usuario;
 
 public class UsuarioDAO {
-	
+
 	@PersistenceContext
 	private EntityManager manager;
 
@@ -14,5 +14,9 @@ public class UsuarioDAO {
 		manager.persist(usuario);
 	}
 
-	
+	public Usuario carrega(String login) {
+		return manager.createQuery("select u from Usuario u where u.login=:login", Usuario.class)
+				.setParameter("login", login).getSingleResult();
+	}
+
 }

@@ -1,17 +1,14 @@
 package br.com.caelum.vraptor.goodbuy.controller;
 
-import javax.annotation.Resource;
 import javax.inject.Inject;
 import javax.persistence.EntityManager;
 import javax.persistence.PersistenceContext;
-import javax.servlet.http.HttpServletRequest;
+import javax.ws.rs.client.ClientBuilder;
 
 import br.com.caelum.vraptor.Controller;
-import br.com.caelum.vraptor.Delete;
 import br.com.caelum.vraptor.Get;
 import br.com.caelum.vraptor.Post;
 import br.com.caelum.vraptor.Result;
-import br.com.caelum.vraptor.goodbuy.daos.ProdutoDAO;
 import br.com.caelum.vraptor.goodbuy.models.Carrinho;
 import br.com.caelum.vraptor.goodbuy.models.Item;
 import br.com.caelum.vraptor.goodbuy.models.Produto;
@@ -28,7 +25,7 @@ public class CarrinhoController {
 
 	@Post("/carrinho")
 	public void adiciona(Item item) {
-		Produto produtoCompleto = manager.find(Produto.class,item.getProduto().getId());
+		Produto produtoCompleto = manager.find(Produto.class, item.getProduto().getId());
 		item.setProduto(produtoCompleto);
 		carrinho.adiciona(item);
 
@@ -43,6 +40,13 @@ public class CarrinhoController {
 	public void remove(int indiceItem) {
 		carrinho.remove(indiceItem);
 		result.redirectTo(this).visualiza();
+	}
+
+	public void finaliza() {
+		//mandar email para o cliente
+		//mandar email para o site
+		//comunicar com os meios de pagamento
+		//ClientBuilder.newBuilder().newClient().target("http://www.uol.com.br").request().async().get();
 	}
 
 }

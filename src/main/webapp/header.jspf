@@ -16,8 +16,11 @@
 	<div id="header">
 		<div id="usuario">
 			<c:if test="${!usuarioWeb.logado}">	    	
-	    	Você não está logado. <a href="<c:url value="/usuarios/login"/>">Login</a> 
-	    	<a href="<c:url value="/usuarios/novo"/>">Cadastre-se</a>
+	    	Você não está logado. <a href="<c:url value="/usuarios/loginForm"/>">Login</a> 
+	    	<a href="<c:url value="/usuarios/novo"/>">Cadastre-se</a>	    	
+	    	</c:if>
+	    	<c:if test="${usuarioWeb.logado}">
+	    		<a href="<c:url value="/compra/endereco"/>">Fechar compra</a>
 	    	</c:if>
 	  	</div>	
 		<div id="carrinho">
