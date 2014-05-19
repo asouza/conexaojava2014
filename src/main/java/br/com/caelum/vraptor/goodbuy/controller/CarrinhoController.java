@@ -42,11 +42,4 @@ public class CarrinhoController {
 		result.redirectTo(this).visualiza();
 	}
 
-	public void finaliza() {
-		//mandar email para o cliente
-		//mandar email para o site
-		//comunicar com os meios de pagamento
-		//ClientBuilder.newBuilder().newClient().target("http://www.uol.com.br").request().async().get();
-	}
-
 }
