@@ -1,9 +1,11 @@
 package br.com.caelum.vraptor.goodbuy.models;
 
+import java.io.Serializable;
+
 import javax.enterprise.inject.Vetoed;
 
 @Vetoed
-public class Compra {
+public class Compra implements Serializable{
 
 	private Carrinho carrinho;
 	private InformacoesDoComprador info;
