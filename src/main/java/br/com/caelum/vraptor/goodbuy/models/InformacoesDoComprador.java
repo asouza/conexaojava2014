@@ -6,6 +6,15 @@ public class InformacoesDoComprador implements Serializable{
 
 	private String numeroDoCartao;
 	private String enderecoDeEntrega;	
+	private Usuario usuario;
+	
+	public void setUsuario(Usuario usuario) {
+		this.usuario = usuario;
+	}
+	
+	public Usuario getUsuario() {
+		return usuario;
+	}
 
 	public InformacoesDoComprador() {
 	}

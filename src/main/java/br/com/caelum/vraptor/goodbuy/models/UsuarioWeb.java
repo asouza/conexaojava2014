@@ -27,4 +27,8 @@ public class UsuarioWeb implements Serializable {
 		return this.usuario != null;
 	}
 
+	public Usuario getUsuario() {
+		return this.usuario;
+	}
+
 }

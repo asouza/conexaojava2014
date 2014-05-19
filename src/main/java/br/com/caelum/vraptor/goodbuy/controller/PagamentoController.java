@@ -2,6 +2,7 @@ package br.com.caelum.vraptor.goodbuy.controller;
 
 import java.io.Serializable;
 
+import javax.annotation.PostConstruct;
 import javax.enterprise.context.Conversation;
 import javax.enterprise.context.ConversationScoped;
 import javax.enterprise.event.Event;
@@ -15,6 +16,7 @@ import br.com.caelum.vraptor.Result;
 import br.com.caelum.vraptor.goodbuy.models.Carrinho;
 import br.com.caelum.vraptor.goodbuy.models.Compra;
 import br.com.caelum.vraptor.goodbuy.models.InformacoesDoComprador;
+import br.com.caelum.vraptor.goodbuy.models.UsuarioWeb;
 
 @ConversationScoped
 @Controller
@@ -30,6 +32,13 @@ public class PagamentoController implements Serializable{
 	private Carrinho carrinho;
 	@Inject
 	private Event<Compra> finalizador;
+	@Inject
+	private UsuarioWeb usuarioLogado;
+	
+	@PostConstruct
+	public void postConstruct(){
+		this.info.setUsuario(usuarioLogado.getUsuario());
+	}
 	
 	public String getConversationId() {
 		return conversation.getId();
