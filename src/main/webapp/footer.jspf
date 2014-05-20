@@ -1,4 +1,4 @@
-
+<%@taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c"%>
 		</div><!-- div content -->
 	</div><!-- div body -->
 	<div id="footer">
@@ -7,3 +7,16 @@
 
 </body>
 </html>
+
+	<script>
+		console.log("testando console");
+		var ws = new WebSocket('ws://localhost:8080/vraptoree-conexaojava/novas-promocoes');
+		
+		ws.onopen = function() {
+		  console.log('Conexão aberta com sucesso');
+		};
+		 
+		ws.onmessage = function(message) {
+			console.log("Nova mensagem "+message.data);
+		};
+	</script>

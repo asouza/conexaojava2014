@@ -1,0 +1,24 @@
+.reveal .agradecimento {
+	text-align:left;
+}
+
+.agradecimento dl {
+	margin-top:3em;
+	font-size: 1.2em;
+}
+
+.agradecimento dt {
+	text-transform:uppercase;
+	font-size:2em;
+	margin-bottom: .5em;
+	font-family: "League Gothic", Impact, sans-serif;
+}
+
+.agradecimento dd {
+	margin-bottom: 2em;
+}
+
+.agradecimento img {
+	float:left;
+	margin-right:1em !important;
+}
